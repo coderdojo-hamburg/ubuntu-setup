@@ -8,6 +8,7 @@ sudo apt-get install blender openscad freecad gimp gimp-help-de language-pack-gn
 sudo snap install --classic code
 sudo snap install chromium chromium-ffmpeg 
 sudo snap install discord
+sudo snap install gitkraken --classic
 snap install android-studio --classic 
 
 
@@ -49,5 +50,5 @@ sudo apt-get install sublime-text
 
 
 # Set favorite apps
-gsettings set org.gnome.shell favorite-apps "['brave_brave.desktop', 'org.gnome.Terminal.desktop', 'sublime_text.desktop', 'code_code.desktop', 'processing.desktop', 'mu.codewith.editor.desktop', 'arduino.desktop', 'org.inkscape.Inkscape.desktop', 'blender.desktop', 'openscad.desktop', 'discord_discord.desktop', 'org.gnome.Nautilus.desktop', 'gitkraken_gitkraken.desktop']"
+gsettings set org.gnome.shell favorite-apps "['brave_brave.desktop', 'org.gnome.Terminal.desktop', 'sublime_text.desktop', 'code_code.desktop', 'processing.desktop', 'mu.codewith.editor.desktop', 'arduino.desktop', 'org.inkscape.Inkscape.desktop', 'blender.desktop', 'openscad.desktop', 'discord_discord.desktop', 'org.gnome.Nautilus.desktop']"
 # TODO: SonicPI not included, because it fails to start on Ubuntu 21.10

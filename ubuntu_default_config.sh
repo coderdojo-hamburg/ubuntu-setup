@@ -1,14 +1,17 @@
 #!/bin/sh
 
 sudo apt-get update
-sudo apt-get install curl vim net-tools
+sudo apt-get install curl vim net-tools apt-transport-https
 
-sudo apt-get install blender openscad freecad gimp gimp-help-de language-pack-gnome-de inkscape sonic-pi mu-editor
+# Brave Browser (see https://brave.com/linux/)
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
+sudo apt-get install blender openscad freecad gimp gimp-help-de language-pack-gnome-de inkscape sonic-pi mu-editor brave-browser
 
 sudo snap install --classic code
 sudo snap install chromium chromium-ffmpeg 
 sudo snap install discord
-sudo snap install gitkraken --classic
 snap install android-studio --classic 
 
 
@@ -50,5 +53,5 @@ sudo apt-get install sublime-text
 
 
 # Set favorite apps
-gsettings set org.gnome.shell favorite-apps "['brave_brave.desktop', 'org.gnome.Terminal.desktop', 'sublime_text.desktop', 'code_code.desktop', 'processing.desktop', 'mu.codewith.editor.desktop', 'arduino.desktop', 'org.inkscape.Inkscape.desktop', 'blender.desktop', 'openscad.desktop', 'discord_discord.desktop', 'org.gnome.Nautilus.desktop']"
+gsettings set org.gnome.shell favorite-apps "['brave-browser.desktop', 'org.gnome.Terminal.desktop', 'sublime_text.desktop', 'code_code.desktop', 'processing.desktop', 'mu.codewith.editor.desktop', 'arduino.desktop', 'org.inkscape.Inkscape.desktop', 'blender.desktop', 'openscad.desktop', 'discord_discord.desktop', 'org.gnome.Nautilus.desktop']" 
 # TODO: SonicPI not included, because it fails to start on Ubuntu 21.10

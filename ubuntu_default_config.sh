@@ -13,11 +13,12 @@ sudo apt-get install blender openscad freecad gimp gimp-help-de language-pack-gn
 sudo snap install --classic code
 sudo snap install chromium chromium-ffmpeg 
 sudo snap install discord
+sudo snap install arduino
 
-# Processing 4.0 beta
-curl -L https://github.com/processing/processing4/releases/download/processing-1278-4.0b3/processing-4.0b3-linux64.tgz | tar -xz
+# Processing 4.2
+curl -L https://github.com/processing/processing4/releases/download/processing-1292-4.2/processing-4.2-linux-x64.tgz | tar -xz
 sudo mkdir /opt/processing
-sudo cp -r processing-4.0b3/* /opt/processing/
+sudo cp -r processing-4.2/* /opt/processing/
 
 sudo sh -c 'echo "#!/usr/bin/env xdg-open" > /usr/share/applications/processing.desktop'
 sudo sh -c 'echo "[Desktop Entry]" >> /usr/share/applications/processing.desktop'
@@ -30,12 +31,6 @@ sudo sh -c 'echo "Terminal=false" >> /usr/share/applications/processing.desktop'
 sudo sh -c 'echo "Type=Application" >> /usr/share/applications/processing.desktop'
 sudo sh -c 'echo "Categories=AudioVideo;Video;Graphics;" >> /usr/share/applications/processing.desktop'
 sudo sh -c 'echo "StartupWMClass=Processing" >> /usr/share/applications/processing.desktop'
-
-
-# Arduino IDE (with patch for Ubuntu 21.10 from https://bugs.launchpad.net/ubuntu/+source/arduino/+bug/1916278/comments/22)
-sudo apt install arduino libserialport0 patchelf
-sudo patchelf --add-needed /usr/lib/x86_64-linux-gnu/libserialport.so.0 /usr/lib/x86_64-linux-gnu/liblistSerialsj.so.1.4.0
-
 
 # Volta (nodejs installer)
 curl https://get.volta.sh | bash
@@ -52,5 +47,5 @@ sudo apt-get install sublime-text
 
 
 # Set favorite apps
-gsettings set org.gnome.shell favorite-apps "['brave-browser.desktop', 'org.gnome.Terminal.desktop', 'sublime_text.desktop', 'code_code.desktop', 'processing.desktop', 'mu.codewith.editor.desktop', 'arduino.desktop', 'org.inkscape.Inkscape.desktop', 'blender.desktop', 'openscad.desktop', 'discord_discord.desktop', 'org.gnome.Nautilus.desktop']" 
+gsettings set org.gnome.shell favorite-apps "['brave-browser.desktop', 'org.gnome.Terminal.desktop', 'sublime_text.desktop', 'code_code.desktop', 'processing.desktop', 'mu.codewith.editor.desktop', 'arduino_arduino.desktop', 'org.inkscape.Inkscape.desktop', 'blender.desktop', 'openscad.desktop', 'discord_discord.desktop', 'org.gnome.Nautilus.desktop']" 
 # TODO: SonicPI not included, because it fails to start on Ubuntu 21.10

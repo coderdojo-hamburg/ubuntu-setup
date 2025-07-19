@@ -1,13 +1,13 @@
 
 sudo apt-get update
-sudo apt-get install curl vim net-tools apt-transport-https
+sudo apt-get -y install curl vim net-tools apt-transport-https
 
-sudo apt-get install blender
-sudo apt-get install openscad
-sudo apt-get install gimp
-sudo apt-get install gimp-help-de
-sudo apt-get install language-pack-gnome-de
-sudo apt-get install inkscape
+sudo apt-get -y install blender
+sudo apt-get -y install openscad
+sudo apt-get -y install gimp
+sudo apt-get -y install gimp-help-de
+sudo apt-get -y install language-pack-gnome-de
+sudo apt-get -y install inkscape
 
 
 # sudo apt-get install mu-editor

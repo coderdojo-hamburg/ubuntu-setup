@@ -15,17 +15,17 @@ sudo apt-get install chromium-browser
 # sudo apt-get install mu-editor
 
 
-flatpak install flathub com.discordapp.Discord
+flatpak install --assumeyes flathub com.discordapp.Discord
 
-flatpak install flathub com.visualstudio.code
-flatpak install flathub org.processing.processingide
-flatpak install flathub cc.arduino.IDE2
-flatpak install flathub com.sublimetext.three
+flatpak install --assumeyes flathub com.visualstudio.code
+flatpak install --assumeyes flathub org.processing.processingide
+flatpak install --assumeyes flathub cc.arduino.IDE2
+flatpak install --assumeyes flathub com.sublimetext.three
 
-flatpak install flathub org.freecad.FreeCAD
+flatpak install --assumeyes flathub org.freecad.FreeCAD
 
 
-flatpak install flathub org.upbge.UPBGE
-flatpak install flathub org.godotengine.Godot
+flatpak install --assumeyes flathub org.upbge.UPBGE
+flatpak install --assumeyes flathub org.godotengine.Godot
 
-flatpak install flathub com.brave.Browser
+flatpak install --assumeyes flathub com.brave.Browser
